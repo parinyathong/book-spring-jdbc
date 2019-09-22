@@ -1,8 +1,8 @@
-package th.ku.Bookstore;
+package bookstore;
 
 import java.util.List;
 
-public interface BookDataAccessObject {
+public interface BookDAO {
     void save(Book book);
     void update(int id, Book book);
     void deleteById(int id);

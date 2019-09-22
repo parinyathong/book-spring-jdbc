@@ -1,4 +1,4 @@
-package th.ku.Bookstore;
+package bookstore;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -7,11 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class BookDataAccessObjectImp implements BookDataAccessObject {
+public class BookDAOimp implements BookDAO {
 
     private JdbcTemplate jdbcTemplate;
 
-    public BookDataAccessObjectImp(JdbcTemplate jdbcTemplate) {
+    public BookDAOimp(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
