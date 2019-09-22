@@ -1,4 +1,4 @@
-package th.ku.Bookstore;
+package bookstore;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -8,10 +8,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-        BookDataAccessObject bookDao = context.getBean("BookDataAccessObjectImp", th.ku.Bookstore.BookDataAccessObjectImp.class);
+        BookDAO bookDao = context.getBean("BookDataAccessObjectImp", bookstore.BookDAOimp.class);
 
         // Insert book "STAT" to Bookstore
-        Book newBook = new Book(4, "STAT", 300);
+        Book newBook = new Book(4, "math", 150);
         bookDao.save(newBook);
 
         // Find book ID 3

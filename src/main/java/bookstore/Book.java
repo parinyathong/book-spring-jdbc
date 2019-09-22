@@ -1,4 +1,4 @@
-package th.ku.Bookstore;
+package bookstore;
 
 public class Book {
     private int id;
